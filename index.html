@@ -5,44 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Segredos do Oculto</title>
+    <!--links fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!--estilo css-->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="cabecalho">
-        <img src="imagens-gerais/logo final 1.png">
-        <h1>Segredos do Oculto</h1>
 
-        <div class="barra-de-navegacao">
-            <a href="index.html">Inicio</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="casos-investigados.html">Casos investigados</a>
-            <a href="envie-relato.html">Envie seu relato</a>
-            <a href="perguntas-frequentes.html">Perguntas frequentes</a>
-            <a href="contato.html">Contato</a>
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="imagens-gerais/logo final 1.png" alt="Logo Segredos do Oculto">
         </div>
-    </div>
+        <h1>Segredos do Oculto</h1>
+        <button class="botao-tema"><img src="imagens-gerais/lampada.png" alt="Mudar tema"></button>
+    </header>
 
-    <h2>Alguns Casos Famosos</h2>
+      <nav class="barra-de-navegacao">
+         <a href="index.html">Inicio</a>
+         <a href="sobre.html">Sobre</a>
+         <a href="casos-investigados.html">Casos investigados</a>
+         <a href="envie-relato.html">Envie seu relato</a>
+         <a href="perguntas-frequentes.html">Perguntas frequentes</a>
+         <a href="contato.html">Contato</a>
+       </nav>
+        
+    <main>
+        <section>
+            <h2>Alguns Casos Famosos</h2>
+            <ul class="grupo-card">
+                <li class="card">teste</li>
+                <li class="card">teste</li>
+                <li class="card">teste</li>
+            </ul>
+        </section>
 
-    <div>
-        <ul class="grupo-card">
-            <li id="card">teste</li>
-            <li id="card">teste</li>
-            <li id="card">teste</li>
-        </ul>
-    </div>
+        <section class="campo-casos">
+            <h3>Informações sobre o site</h2>
+            <p>Texto teste</p>
+            <img src="" alt="">
+            <a href="sobre.html">saber mais...</a>
+        </section>
+    </main>
 
-    <div class="campo-casos">
-        <h2>Informações sobre o site</h2>
-        <p>Texto teste</p>
-        <img src="" alt="">
-        <a href="sobre.html">saber mais...</a>
-    </div>
-
-    <div class="rodape">
-        <p>Segredos do Oculto</p>
-    </div>
+    <footer class="rodape">
+        <p>Segredos do Oculto © 2025</p>
+    </footer>
 
 </body>
 
