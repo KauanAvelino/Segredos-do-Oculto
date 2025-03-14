@@ -87,14 +87,13 @@ h2 {
     padding: 10px;
     margin: 40px 0px;
 }
-  
-
+ 
 /************************* AREA DOS CARDSSSSS ********************************************/
 
 .grupo-card {
     justify-content: center;
     display: flex;
-    gap: 150px;
+    gap: 100px;
     margin: 0px 0px 20px 0px;
 }
 
@@ -169,8 +168,10 @@ h2 {
 /********************** Conteudo *******************************************************/
 
 .campo-conteudo {
-    margin: 50px 100px;
+    margin: 100px 200px;
     height: 500px;
+    text-align: center;
+    border: 1px solid red;
 }
 
 /********************** RODAPÉ ***************************************************/
