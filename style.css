@@ -1,18 +1,44 @@
-
 /*FORMATAÇÕES GERAIS*/
 * {
-  margin: 0;
-  padding: 0;  
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: #0A0A0A; 
-  background-image: url('imagens-gerais/Background.jpg');
-  color: #C2D9A1;
-  font-family: "Work Sans", sans-serif;
+    background-color: #0A0A0A;
+    background-image: url('imagens-gerais/Background.jpg');
+    color: #C2D9A1;
+    font-family: "Work Sans", sans-serif;
+}
+
+main {
+    
 }
 
 
+/*** Titulos principais das pag ***/
+
+h2 {
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    padding: 10px;
+    margin: 50px 0px;
+}
+
+/***** titulo das section ******/
+
+h3 {
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    padding: 10px;
+    margin: 40px 0px;
+}
 /*****************************  AREA DO CABEÇALHO E BARRA DE NAVEGAÇÃO **************************************/
 
 .cabecalho {
@@ -22,12 +48,12 @@ body {
     background-color: #030303;
 }
 
-.logo img{
-    margin: 10px 60px; 
+.logo img {
+    margin: 10px 60px;
     height: 90px;
 }
 
-h1{
+h1 {
     font-family: "Cinzel", serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -41,7 +67,7 @@ h1{
     gap: 15px;
     background-color: #030303;
     justify-content: center;
-    padding: 0px;  
+    padding: 0px;
 }
 
 .barra-de-navegacao a {
@@ -58,7 +84,7 @@ h1{
 
 }
 
-.barra-de-navegacao a:hover{
+.barra-de-navegacao a:hover {
     background: #333;
 }
 
@@ -68,7 +94,7 @@ h1{
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    margin: 10px 100px; 
+    margin: 10px 100px;
     transition: background 0.3s ease;
 }
 
@@ -85,9 +111,9 @@ h2 {
     font-style: normal;
     font-size: 32px;
     padding: 10px;
-    margin: 40px 0px;
+    margin: 50px 0px;
 }
- 
+
 /************************* AREA DOS CARDSSSSS ********************************************/
 
 .grupo-card {
@@ -108,14 +134,14 @@ h2 {
 }
 
 
-.card img{
+.card img {
     width: 300px;
     height: 500px;
     border-radius: 25px;
     filter: brightness(0.7);
 }
 
-.card p{
+.card p {
     color: #E0E0E0;
     font-family: "Lora", serif;
     font-optical-sizing: auto;
@@ -138,7 +164,7 @@ h2 {
     font-style: normal;
     position: absolute;
     width: 80%;
-    text-align: center; 
+    text-align: center;
     font-size: 24px;
     top: 100%;
     left: 50%;
@@ -151,24 +177,69 @@ h2 {
     transform: scale(1.05);
 }
 
-.card:hover p{
+.card:hover p {
     top: 65%;
     opacity: 1;
 }
 
-.card:hover h3{
+.card:hover h3 {
     top: 30%;
     opacity: 1;
 }
 
-.grupo-card:hover .card:not(:hover){
+.grupo-card:hover .card:not(:hover) {
     filter: blur(2px);
 }
 
-/********************** Conteudo *******************************************************/
+/********************** Campo de conteudo *******************************************************/
+
+/****sobre da página de inicio****/
+
+.sobre-pag-inicio {
+    margin: 50px 150px;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.sobre-pag-inicio p {
+    color: #E0E0E0;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    padding: 0% 5%;
+    text-align: center;
+
+}
+
+.sobre-pag-inicio img {
+    height: 200px;
+    margin: 50px;
+}
+
+.sobre-pag-inicio a {
+    text-decoration: none;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #C2D9A1;
+    padding: 5px 10px;
+    width: max-content;
+    margin-left: 88%;
+    display: block;
+}
+
+.sobre-pag-inicio a:hover {
+    background-color: #333;
+}
+
+/*** conteudos***/
 
 .campo-conteudo {
-    margin: 100px 200px;
+    margin: 50px 150px;
     height: 500px;
     text-align: center;
     border: 1px solid red;
