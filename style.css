@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    
+    margin: 50px 150px;
 }
 
 
@@ -111,7 +111,7 @@ h2 {
     font-style: normal;
     font-size: 32px;
     padding: 10px;
-    margin: 50px 0px;
+    margin: 50px auto;
 }
 
 /************************* AREA DOS CARDSSSSS ********************************************/
@@ -120,7 +120,6 @@ h2 {
     justify-content: center;
     display: flex;
     gap: 100px;
-    margin: 0px 0px 20px 0px;
 }
 
 .card {
@@ -174,7 +173,7 @@ h2 {
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.10);
 }
 
 .card:hover p {
@@ -188,7 +187,7 @@ h2 {
 }
 
 .grupo-card:hover .card:not(:hover) {
-    filter: blur(2px);
+    filter: blur(3px);
 }
 
 /********************** Campo de conteudo *******************************************************/
@@ -196,7 +195,7 @@ h2 {
 /****sobre da página de inicio****/
 
 .sobre-pag-inicio {
-    margin: 50px 150px;
+    margin: 50px auto;
     height: auto;
     text-align: center;
     justify-content: center;
@@ -239,7 +238,7 @@ h2 {
 /*** conteudos***/
 
 .campo-conteudo {
-    margin: 50px 150px;
+    margin: 50px auto;
     height: 500px;
     text-align: center;
     border: 1px solid red;
