@@ -15,6 +15,15 @@ main {
     margin: 50px 150px;
 }
 
+p {
+    color: #E0E0E0;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
 
 /*** Titulos principais das pag ***/
 
@@ -100,17 +109,6 @@ h1 {
     background: #333;
 }
 
-/************************* TITULOS PRINCIPAIS DAS PAG **************************************/
-
-h2 {
-    text-align: center;
-    font-family: "Libre Baskerville", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 32px;
-    padding: 10px;
-    margin: 50px auto;
-}
 
 /************************* AREA DOS CARDSSSSS ********************************************/
 
@@ -180,7 +178,7 @@ h2 {
 }
 
 .card:hover h3 {
-    top: 30%;
+    top: 25%;
     opacity: 1;
 }
 
@@ -239,7 +237,23 @@ h2 {
     margin: 50px auto;
     height: 500px;
     text-align: center;
-    border: 1px solid red;
+}
+
+.curiosidades {
+    margin: 50px auto;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+#curiosidade {
+    color: #E0E0E0;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    padding: 0% 5%;
 }
 
 /********************** RODAPÉ ***************************************************/
