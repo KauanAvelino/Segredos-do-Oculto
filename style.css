@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -27,6 +28,16 @@ p {
 
 /*** Titulos principais das pag ***/
 
+h1 {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #C2D9A1;
+    font-size: 64px;
+    text-align: center;
+}
+
 h2 {
     text-align: center;
     font-family: "Libre Baskerville", serif;
@@ -37,8 +48,6 @@ h2 {
     margin: 50px 0px;
 }
 
-/***** titulo das section ******/
-
 h3 {
     text-align: center;
     font-family: "Libre Baskerville", serif;
@@ -48,6 +57,7 @@ h3 {
     padding: 10px;
     margin: 40px 0px;
 }
+
 /*****************************  AREA DO CABEÇALHO E BARRA DE NAVEGAÇÃO **************************************/
 
 .cabecalho {
@@ -55,20 +65,11 @@ h3 {
     align-items: center;
     justify-content: space-between;
     background-color: #030303;
+    padding: 10px 20px;
 }
 
 .logo img {
-    margin: 10px 60px;
-    height: 90px;
-}
-
-h1 {
-    font-family: "Cinzel", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    color: #C2D9A1;
-    font-size: 64px;
+    height: 80px;
 }
 
 .barra-de-navegacao {
@@ -87,8 +88,7 @@ h1 {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    padding: 5px 55px;
-    margin: 5px 0px;
+    padding: 5px 20px;
 }
 
 .barra-de-navegacao a:hover {
@@ -114,53 +114,37 @@ h1 {
 
 .grupo-card {
     justify-content: center;
+    flex-wrap: wrap;
     display: flex;
-    gap: 100px;
+    gap: 50px;
 }
 
 .card {
-    width: 300px;
-    height: 500px;
+    width: 280px;
+    height: 450px;
     border-radius: 25px;
     position: relative;
     overflow: hidden;
-    transition: 1s;
+    transition: 0.5s;
     background-color: #1a1a1a;
 }
 
 
 .card img {
-    width: 300px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     border-radius: 25px;
     filter: brightness(0.7);
 }
 
-.card p {
-    color: #E0E0E0;
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    position: absolute;
-    width: 80%;
-    text-align: center;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 1s;
-    opacity: 0;  
+.card:hover {
+    transform: scale(1.05);
 }
 
-.card h3 {
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+.card p, .card h3 {
     position: absolute;
     width: 80%;
     text-align: center;
-    font-size: 24px;
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -168,8 +152,8 @@ h1 {
     opacity: 0;
 }
 
-.card:hover {
-    transform: scale(1.10);
+.card h3 {
+    font-size: 24px;
 }
 
 .card:hover p {
@@ -178,7 +162,7 @@ h1 {
 }
 
 .card:hover h3 {
-    top: 25%;
+    top: 15%;
     opacity: 1;
 }
 
@@ -186,26 +170,16 @@ h1 {
     filter: blur(3px);
 }
 
-/********************** Campo de conteudo *******************************************************/
-
 /****sobre da página de inicio****/
 
 .sobre-pag-inicio {
     margin: 50px auto;
-    height: auto;
     text-align: center;
-    justify-content: center;
 }
 
 .sobre-pag-inicio p {
-    color: #E0E0E0;
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
     font-size: 20px;
     padding: 0% 5%;
-    text-align: center;
 
 }
 
@@ -222,9 +196,9 @@ h1 {
     font-style: normal;
     color: #C2D9A1;
     padding: 5px 10px;
-    width: max-content;
-    margin-left: 88%;
     display: block;
+    width: fit-content;
+    margin-left: 85%;
 }
 
 .sobre-pag-inicio a:hover {
@@ -262,4 +236,61 @@ h1 {
     text-align: center;
     padding: 30px;
     background-color: #030303;
+}
+
+/******* Responsividade ********/
+
+@media (max-width: 1024px) {
+    main {
+        margin: 30px 80px;
+    }
+    h1 {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 768px){
+    main {
+        margin: 20px 40px;
+    }
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3{
+        font-size: 24px;
+    }
+    p {
+        font-size: 18px;
+    }
+    .grupo-card {
+        gap: 30px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    main {
+        margin: 10px 20px;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .logo img {
+        height: 60px;
+    }
+    .grupo-card {
+        gap: 20px;
+    }
 }
