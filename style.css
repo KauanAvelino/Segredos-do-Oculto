@@ -88,6 +88,7 @@ h3 {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    white-space: nowrap;
     padding: 5px 20px;
 }
 
@@ -127,7 +128,6 @@ h3 {
     transition: 0.5s;
     background-color: #1a1a1a;
 }
-
 
 .card img {
     width: 100%;
@@ -195,7 +195,8 @@ h3 {
     font-style: normal;
     color: #C2D9A1;
     padding: 5px 10px;
-    display: block;
+    display: inline-block;
+    white-space: nowrap;
     width: fit-content;
     margin-left: 85%;
 }
@@ -248,7 +249,7 @@ h3 {
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 720px){
     main {
         margin: 20px 40px;
     }
@@ -266,30 +267,43 @@ h3 {
     }
     .grupo-card {
         gap: 30px;
+        flex-direction: column;
+        align-items: center;
     }
-}
 
+    .card {
+        width: 90%;
+        height: 300px;
+    }
 
-@media (max-width: 480px) {
-    main {
-        margin: 10px 20px;
+    .card img{
+        width: auto;
+        height: 300px;
     }
-    h1 {
-        font-size: 36px;
+
+    .card:nth-child(1) img {
+        content: url("Imagens-pag-principal/CasoRoswell-responsivo.jpeg");
     }
-    h2 {
-        font-size: 24px;
+
+    .card:nth-child(2) img {
+        content: url("Imagens-pag-principal/Et-varginha-responsivo.jpeg");
     }
-    h3 {
+
+    .card:nth-child(3) img {
+        content: url("Imagens-pag-principal/Operacao-prato-responsiva.jpeg");
+    }
+
+    .card h3 {
         font-size: 20px;
+        top: 10%
     }
-    p {
-        font-size: 16px;
+    
+    .card:hover h3 {
+        top: 5%;
     }
-    .logo img {
-        height: 60px;
+
+    .card p {
+        font-size: 16px; 
     }
-    .grupo-card {
-        gap: 20px;
-    }
+    
 }
