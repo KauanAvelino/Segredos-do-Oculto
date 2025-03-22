@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     atualizarCuriosidade();
 });
 
- //Função do Botão de tema
+//Função do Botão de tema
 
 document.addEventListener("DOMContentLoaded", function () {
     const botaoTema = document.querySelector(".botao-tema");
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const logo = document.getElementById("logo-img");
     const botaoTemaImg = document.getElementById("botao-tema-img");
     const sobreImg = document.getElementById("sobre-pag-inicio-img");
- 
+
     // Verifica se tem tema salvo no localStorage e aplica
     if (localStorage.getItem("tema") === "claro") {
         body.classList.add("modo-claro");
@@ -79,10 +79,12 @@ document.addEventListener("DOMContentLoaded", function () {
             logo.src = "imagens-gerais/logo_final_1_inverted.png";
             botaoTemaImg.src = "imagens-gerais/lampada_inverted.png";
             sobreImg.src = "Imagens-pag-principal/TV_Varminho_Logo_inverted.webp";
+            body.style.backgroundImage = "url('imagens-gerais/Background_inverted.jpg')";
         } else {
             logo.src = "imagens-gerais/logo final 1.png";
             botaoTemaImg.src = "imagens-gerais/lampada.png";
             sobreImg.src = "Imagens-pag-principal/TV_Varminho_Logo.webp";
+            body.style.backgroundImage = "url('imagens-gerais/Background.jpg')";
         }
     }
 });

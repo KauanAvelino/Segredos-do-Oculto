@@ -14,7 +14,9 @@ body {
 }
 
 main {
-    margin: 50px 150px;
+    margin: 50px auto;
+    max-width: 1440px;
+    width: 80%;
 }
 
 p {
@@ -64,7 +66,8 @@ h3 {
 .cabecalho {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
     background-color: #030303;
     padding: 10px 20px;
     transition: background-color 0.5s ease-in-out;
@@ -144,7 +147,8 @@ h3 {
     transform: scale(1.05);
 }
 
-.card p, .card h3 {
+.card p,
+.card h3 {
     position: absolute;
     width: 80%;
     text-align: center;
@@ -242,6 +246,7 @@ h3 {
     background-color: #030303;
     font-size: 14px;
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
 }
@@ -250,7 +255,7 @@ h3 {
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
-    gap:50px;
+    gap: 50px;
 }
 
 .redes-sociais a {
@@ -265,7 +270,7 @@ h3 {
 }
 
 .redes-sociais a img {
-    width: 32px; 
+    width: 32px;
     height: 32px;
 }
 
@@ -273,24 +278,24 @@ h3 {
     transform: scale(1.2);
 }
 
-.rodape p{
+.rodape p {
     margin-top: 10px;
     color: #d4d4d4;
 }
 
 /******* Modo Claro *******/
-.modo-claro{
+.modo-claro {
     background-color: #f0f0f0;
     background-image: url('imagens-gerais/Background_inverted.jpg');
     color: #030303;
 }
 
-.modo-claro .cabecalho{
+.modo-claro .cabecalho {
     background-color: #FCFCFC;
     color: #030303;
 }
 
-.modo-claro .barra-de-navegacao{
+.modo-claro .barra-de-navegacao {
     background-color: #FCFCFC
 }
 
@@ -310,64 +315,75 @@ h3 {
     color: #030303;
 }
 
-.modo-claro .barra-de-navegacao a:hover{
+.modo-claro .barra-de-navegacao a:hover {
     background-color: #CCC;
 }
 
-.modo-claro .botao-tema{
+.modo-claro .botao-tema {
     background-color: #FCFCFC;
 }
 
-.modo-claro .botao-tema:hover{
-    background-color:  #CCC;
+.modo-claro .botao-tema:hover {
+    background-color: #CCC;
 }
 
 .modo-claro .rodape {
     background-color: #FCFCFC;
 }
 
-.modo-claro .card p{
+.modo-claro .card p {
     color: #E8E8E8;
 }
 
-.modo-claro .card h3{
+.modo-claro .card h3 {
     color: #C2D9A1;
 }
 
-.modo-claro a{
+.modo-claro a {
     color: #030303;
 }
 
-.modo-claro a:hover{
+.modo-claro a:hover {
     background-color: #CCC;
 }
+
+.modo-claro .redes-sociais a:hover {
+    background: none;
+}
+
 /******* Responsividade ********/
 
 @media (max-width: 1024px) {
     main {
         margin: 30px 80px;
     }
+
     h1 {
         font-size: 52px;
     }
 }
 
-@media (max-width: 720px){
+@media (max-width: 720px) {
     main {
         margin: 20px 40px;
     }
+
     h1 {
         font-size: 48px;
     }
+
     h2 {
         font-size: 28px;
     }
-    h3{
+
+    h3 {
         font-size: 24px;
     }
+
     p {
         font-size: 18px;
     }
+
     .grupo-card {
         gap: 30px;
         flex-direction: column;
@@ -379,21 +395,22 @@ h3 {
         height: 300px;
     }
 
-    .card img{
+    .card img {
         width: 648px;
         height: 300px;
     }
+
     .card h3 {
         font-size: 20px;
         top: 10%
     }
-    
+
     .card:hover h3 {
         top: 5%;
     }
 
     .card p {
-        font-size: 16px; 
+        font-size: 16px;
     }
-    
+
 }
