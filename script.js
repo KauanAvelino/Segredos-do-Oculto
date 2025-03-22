@@ -1,3 +1,5 @@
+// Função das curiosidades
+
 document.addEventListener("DOMContentLoaded", function () {
     const curiosidades = [
         "Em 1996, na cidade de Varginha, Minas Gerais, um dos casos mais intrigantes da ufologia brasileira tomou conta das manchetes. Testemunhas relataram ter visto uma criatura de pele marrom, olhos vermelhos e corpo frágil vagando pela cidade. O Exército Brasileiro foi acusado de capturar e esconder a entidade, enquanto relatos indicavam movimentações militares suspeitas na região. Até hoje, muitas perguntas permanecem sem resposta. O governo nega qualquer envolvimento, mas ufólogos e pesquisadores continuam investigando, reunindo relatos de civis e ex-militares que alegam saber mais do que foi divulgado.",
@@ -37,4 +39,50 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     atualizarCuriosidade();
+});
+
+ //Função do Botão de tema
+
+document.addEventListener("DOMContentLoaded", function () {
+    const botaoTema = document.querySelector(".botao-tema");
+    const body = document.body;
+
+    // Seleciona as imagens para mudar pelas versões invertidas
+    const logo = document.getElementById("logo-img");
+    const botaoTemaImg = document.getElementById("botao-tema-img");
+    const sobreImg = document.getElementById("sobre-pag-inicio-img");
+ 
+    // Verifica se tem tema salvo no localStorage e aplica
+    if (localStorage.getItem("tema") === "claro") {
+        body.classList.add("modo-claro");
+        mudarImagens("claro");
+    } else {
+        mudarImagens("escuro");
+    }
+
+    botaoTema.addEventListener("click", function () {
+        body.classList.toggle("modo-claro");
+
+        if (body.classList.contains("modo-claro")) {
+            localStorage.setItem("tema", "claro");
+            mudarImagens("claro");
+        } else {
+            localStorage.setItem("tema", "escuro");
+            mudarImagens("escuro");
+        }
+    });
+
+    // A função que muda as imagens para a versão invertida
+
+    function mudarImagens(modo) {
+        if (modo === "claro") {
+            logo.src = "imagens-gerais/logo_final_1_inverted.png";
+            botaoTemaImg.src = "imagens-gerais/lampada_inverted.png";
+            sobreImg.src = "Imagens-pag-principal/TV_Varminho_Logo_inverted.webp";
+        } else {
+            logo.src = "imagens-gerais/logo final 1.png";
+            botaoTemaImg.src = "imagens-gerais/lampada.png";
+            sobreImg.src = "Imagens-pag-principal/TV_Varminho_Logo.webp";
+        }
+    }
 });

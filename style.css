@@ -10,6 +10,7 @@ body {
     background-image: url('imagens-gerais/Background.jpg');
     color: #C2D9A1;
     font-family: "Work Sans", sans-serif;
+    transition: background-image 0.5s ease-in-out;
 }
 
 main {
@@ -66,10 +67,12 @@ h3 {
     justify-content: space-between;
     background-color: #030303;
     padding: 10px 20px;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .logo img {
     height: 80px;
+    transition: background 0.3s ease;
 }
 
 .barra-de-navegacao {
@@ -78,6 +81,7 @@ h3 {
     background-color: #030303;
     justify-content: center;
     padding: 10px;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .barra-de-navegacao a {
@@ -98,7 +102,7 @@ h3 {
 
 .botao-tema {
     background: #030303;
-    color: #d4d4d4;
+    color: #E8E8E8;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
@@ -274,6 +278,69 @@ h3 {
     color: #d4d4d4;
 }
 
+/******* Modo Claro *******/
+.modo-claro{
+    background-color: #f0f0f0;
+    background-image: url('imagens-gerais/Background_inverted.jpg');
+    color: #030303;
+}
+
+.modo-claro .cabecalho{
+    background-color: #FCFCFC;
+    color: #030303;
+}
+
+.modo-claro .barra-de-navegacao{
+    background-color: #FCFCFC
+}
+
+.modo-claro h1 {
+    color: #030303;
+}
+
+.modo-claro p {
+    color: #1F1F1F;
+}
+
+.modo-claro #curiosidade {
+    color: #1F1F1F;
+}
+
+.modo-claro .barra-de-navegacao a {
+    color: #030303;
+}
+
+.modo-claro .barra-de-navegacao a:hover{
+    background-color: #CCC;
+}
+
+.modo-claro .botao-tema{
+    background-color: #FCFCFC;
+}
+
+.modo-claro .botao-tema:hover{
+    background-color:  #CCC;
+}
+
+.modo-claro .rodape {
+    background-color: #FCFCFC;
+}
+
+.modo-claro .card p{
+    color: #E8E8E8;
+}
+
+.modo-claro .card h3{
+    color: #C2D9A1;
+}
+
+.modo-claro a{
+    color: #030303;
+}
+
+.modo-claro a:hover{
+    background-color: #CCC;
+}
 /******* Responsividade ********/
 
 @media (max-width: 1024px) {
@@ -313,22 +380,9 @@ h3 {
     }
 
     .card img{
-        width: auto;
+        width: 648px;
         height: 300px;
     }
-
-    .card:nth-child(1) img {
-        content: url("Imagens-pag-principal/CasoRoswell-responsivo.jpeg");
-    }
-
-    .card:nth-child(2) img {
-        content: url("Imagens-pag-principal/Et-varginha-responsivo.jpeg");
-    }
-
-    .card:nth-child(3) img {
-        content: url("Imagens-pag-principal/Operacao-prato-responsiva.jpeg");
-    }
-
     .card h3 {
         font-size: 20px;
         top: 10%
