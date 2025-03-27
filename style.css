@@ -66,7 +66,7 @@ h3 {
 .cabecalho {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 50px;
     background-color: #030303;
     padding: 10px 20px;
@@ -101,6 +101,15 @@ h3 {
 
 .barra-de-navegacao a:hover {
     background: #333;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #E8E8E8;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .botao-tema {
@@ -364,7 +373,7 @@ h3 {
     }
 }
 
-@media (max-width: 720px) {
+@media screen and (max-width: 768px) {
     main {
         margin: 20px 40px;
     }
@@ -385,6 +394,37 @@ h3 {
         font-size: 18px;
     }
 
+    .cabecalho {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        height: 60px; /* Logo menor */
+    }
+
+    .barra-de-navegacao {
+        display: none; /* Esconde o menu por padrão */
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .barra-de-navegacao a {
+        display: block;
+        padding: 10px;
+    }
+
+    /* Exibe o botão de menu hambúrguer */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Mostra a navbar quando ativa */
+    .barra-de-navegacao.ativo {
+        display: flex;
+    }
+    
     .grupo-card:hover .card:not(:hover) {
         filter: none;
     }
@@ -415,7 +455,7 @@ h3 {
         margin: 0;
         opacity: 1;
         transform: translate(-50%, -50%);
-        transition:none;
+        transition: none;
         top: 100%;
         left: 50%;
     }
