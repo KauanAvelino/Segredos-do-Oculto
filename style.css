@@ -110,6 +110,7 @@ h3 {
     padding: 10px 15px;
     cursor: pointer;
     transition: background 0.3s ease;
+    opacity: 1;
 }
 
 .botao-tema:hover {
@@ -384,33 +385,53 @@ h3 {
         font-size: 18px;
     }
 
-    .grupo-card {
-        gap: 30px;
-        flex-direction: column;
-        align-items: center;
+    .grupo-card:hover .card:not(:hover) {
+        filter: none;
     }
 
     .card {
-        width: 90%;
-        height: 300px;
+        transform: none;
+        transition: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 280px;
+        height: 450px;
+        overflow: hidden;
     }
 
     .card img {
-        width: 648px;
-        height: 300px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card h3,
+    .card p {
+        position: absolute;
+        text-align: center;
+        width: 80%;
+        padding: 10px;
+        margin: 0;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        transition:none;
+        top: 100%;
+        left: 50%;
     }
 
     .card h3 {
-        font-size: 20px;
-        top: 10%
-    }
-
-    .card:hover h3 {
-        top: 5%;
+        top: 15%;
+        font-size: 22px;
     }
 
     .card p {
+        top: 65%;
         font-size: 16px;
+    }
+
+    .card:hover {
+        transform: none;
     }
 
 }
