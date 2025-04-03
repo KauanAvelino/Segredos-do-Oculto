@@ -72,19 +72,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // A função que muda as imagens para a versão invertida
+// A função que muda as imagens para a versão invertida
 
     function mudarImagens(modo) {
         if (modo === "claro") {
-            logo.src = "imagens-gerais/logo_final_1_inverted.png";
-            botaoTemaImg.src = "imagens-gerais/lampada_inverted.png";
-            sobreImg.src = "Imagens-pag-principal/TV_Varminho_Logo_inverted.webp";
-            body.style.backgroundImage = "url('imagens-gerais/Background_inverted.jpg')";
+            if (logo) logo.src = "imagens-gerais/logo_final_1_inverted.png";
+            if (botaoTemaImg) botaoTemaImg.src = "imagens-gerais/lampada_inverted.png";
+            if (sobreImg) sobreImg.src = "Imagens-pag-principal/TV_Varminho_Logo_inverted.webp";
+            if (body) body.style.backgroundImage = "url('imagens-gerais/Background_inverted.jpg')";
         } else {
-            logo.src = "imagens-gerais/logo final 1.png";
-            botaoTemaImg.src = "imagens-gerais/lampada.png";
-            sobreImg.src = "Imagens-pag-principal/TV_Varminho_Logo.webp";
-            body.style.backgroundImage = "url('imagens-gerais/Background.jpg')";
+            if (logo) logo.src = "imagens-gerais/logo final 1.png";
+            if (botaoTemaImg) botaoTemaImg.src = "imagens-gerais/lampada.png";
+            if (sobreImg) sobreImg.src = "Imagens-pag-principal/TV_Varminho_Logo.webp";
+            if (body) body.style.backgroundImage = "url('imagens-gerais/Background.jpg')";
         }
     }
 });

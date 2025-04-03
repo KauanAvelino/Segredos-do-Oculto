@@ -224,6 +224,57 @@ h3 {
 }
 
 /*** conteudos***/
+.conteudo{
+    margin: 100px auto;
+    text-align: left;
+}
+
+.conteudo ul {
+    padding: 0;
+    margin: 20px auto;
+    margin-left: 50px;
+}
+.conteudo li {
+    margin: 10px 0;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #E0E0E0;
+}
+
+.texto-imagem{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    gap: 20px;
+}
+
+.texto-imagem p{
+    flex: 1;
+    font: 16px;
+    line-height: 1.5;
+}
+
+.texto-imagem img{
+    height: 200px;
+    max-width: 40%;
+}
+.conteudo h3{
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    text-align: left;
+    padding: 10px;
+    margin: 40px 0px;
+}
+
+.conteudo img {
+    height: 200px;
+    margin: 50px;
+}
 
 .campo-conteudo {
     margin: 50px auto;
@@ -361,6 +412,10 @@ h3 {
     background: none;
 }
 
+.modo-claro li {
+    color: #030303;
+}
+
 /******* Responsividade ********/
 
 @media (max-width: 1024px) {
@@ -395,23 +450,33 @@ h3 {
     }
 
     .cabecalho {
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     .logo img {
-        height: 60px; /* Logo menor */
+        height: 80%;
+        margin-bottom: 10px;
     }
 
     .barra-de-navegacao {
-        display: none; /* Esconde o menu por padrão */
+        display: none;
         flex-direction: column;
-        text-align: center;
+        align-items: center;
         width: 100%;
     }
 
     .barra-de-navegacao a {
         display: block;
+        text-align: center;
+        width: 100%;
         padding: 10px;
     }
 
@@ -473,5 +538,21 @@ h3 {
     .card:hover {
         transform: none;
     }
+
+    .texto-imagem {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .texto-imagem p {
+        text-align: left; 
+    }
+
+    .texto-imagem img {
+        max-width: 80%; 
+        margin-top: 20px;
+    }
+
 
 }
