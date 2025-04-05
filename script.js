@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-// A função que muda as imagens para a versão invertida
+    // A função que muda as imagens para a versão invertida
 
     function mudarImagens(modo) {
         if (modo === "claro") {
@@ -120,4 +120,57 @@ document.addEventListener("DOMContentLoaded", function () {
             behavior: "smooth"
         });
     });
+});
+
+
+// Função da animação do texto do caso
+document.addEventListener("DOMContentLoaded", function () {
+    const texto = `
+    Ao longo da história, inúmeros relatos de encontros sobrenaturais, aparições de luzes misteriosas e eventos inexplicáveis despertaram a curiosidade de céticos e crentes. Nesta seção, reunimos os casos mais emblemáticos da ufologia e do oculto – histórias que desafiaram a lógica, chamaram a atenção da mídia e até hoje alimentam debates sobre o desconhecido. Prepare-se para explorar alguns dos acontecimentos mais intrigantes já registrados.
+`;
+
+    const elemento = document.getElementById("casos");
+
+    function escreverTexto(texto, velocidade, callback) {
+        let i = 0;
+        elemento.innerHTML = "";
+
+        function escrever() {
+            if (i < texto.length) {
+                elemento.innerHTML += texto.charAt(i);
+                i++;
+                setTimeout(escrever, velocidade);
+            } else if (callback) {
+                setTimeout(callback, 10000); // espera 10s antes de apagar
+            }
+        }
+
+        escrever();
+    }
+
+    function apagarTexto(velocidade, callback) {
+        let i = elemento.innerHTML.length;
+
+        function apagar() {
+            if (i > 0) {
+                elemento.innerHTML = elemento.innerHTML.substring(0, i - 1);
+                i--;
+                setTimeout(apagar, velocidade);
+            } else if (callback) {
+                callback();
+            }
+        }
+
+        apagar();
+    }
+
+    function cicloTexto() {
+        escreverTexto(texto, 30, () => {
+            apagarTexto(15, cicloTexto); 
+        });
+    }
+
+    if (elemento) {
+        cicloTexto();
+    }
 });

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segredos do Oculto - Incio</title>
+    <link rel="icon" href="Imagens-pag-principal/TV_Varminho_Logo.webp">
+    <!--links fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!--estilo css-->
+    <link rel="stylesheet" href="style.css">
+    <!--script do javascript-->
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="logo">
+            <img id="logo-img" src="imagens-gerais/logo final 1.png" alt="Logo Segredos do Oculto">
+        </div>
+        <h1>Segredos do Oculto</h1>
+        <button class="botao-tema"><img id="botao-tema-img" src="imagens-gerais/lampada.png" alt="Mudar tema"></button>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+    </header>
+
+    <nav class="barra-de-navegacao" id="barra-de-navegacao">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="casos-investigados.html">Casos investigados</a>
+        <a href="envie-relato.html">Envie seu relato</a>
+        <a href="perguntas-frequentes.html">Perguntas frequentes</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <main>
+        <h2>Envie seu relato</h2>
+        <div class="campo-conteudo">
+            <p>
+                Preencha o formulário e compartilhe seu relato com a gente. Nossa equipe especializada irá analisar
+                cuidadosamente cada caso em busca de padrões, evidências e possíveis explicações para o fenômeno
+                ocorrido.
+            </p>
+        </div>
+
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu email">
+
+            <label for="relato">Relato</label>
+            <textarea id="relato" name="relato" rows="10" required placeholder="Descreva seu relato aqui"></textarea>
+
+            <label for="arquivos">Upload de Arquivos (opcional)</label>
+            <input type="file" id="arquivos" name="arquivos" accept=".jpg, .jpeg, .png, .pdf, .docx">
+
+            <label for="checkbox">
+                <input type="checkbox" id="checkbox" name="checkbox" required>
+                Concordo com os <a href="termos.html">termos de uso</a> e a <a href="politica-privacidade.html">política de politica-privacidade
+            </label>
+
+            <button type="submit">Enviar</button>
+        </form>
+             
+
+    </main>
+    <button id="btn-topo" title="Voltar ao topo">↑</button>
+
+    <footer class="rodape">
+        <div class="redes-sociais">
+            <a href="https://www.linkedin.com/in/kauan-avelino-de-queiroga/" target="_blank">
+                <img src="imagens-gerais/LinkedIn_icon.png" alt="LinkedIn">
+                LinkedIn
+            </a>
+            <a href="https://github.com/KauanAvelino" target="_blank">
+                <img src="imagens-gerais/github-icon.svg" alt="GitHub">
+                GitHub
+            </a>
+        </div>
+        <p>Segredos do Oculto © 2025 </p>
+    </footer>
+
+</body>
+
+</html>
