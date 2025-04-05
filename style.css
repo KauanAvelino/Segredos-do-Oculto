@@ -29,6 +29,7 @@ p {
 }
 
 
+
 /*** Titulos principais das pag ***/
 
 h1 {
@@ -224,7 +225,7 @@ h3 {
 }
 
 /*** conteudos***/
-.conteudo{
+.conteudo {
     margin: 100px auto;
     text-align: left;
 }
@@ -234,6 +235,7 @@ h3 {
     margin: 20px auto;
     margin-left: 50px;
 }
+
 .conteudo li {
     margin: 10px 0;
     font-family: "Lora", serif;
@@ -244,24 +246,7 @@ h3 {
     color: #E0E0E0;
 }
 
-.texto-imagem{
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    gap: 20px;
-}
-
-.texto-imagem p{
-    flex: 1;
-    font: 16px;
-    line-height: 1.5;
-}
-
-.texto-imagem img{
-    height: 200px;
-    max-width: 40%;
-}
-.conteudo h3{
+.conteudo h3 {
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
     font-style: normal;
@@ -274,6 +259,28 @@ h3 {
 .conteudo img {
     height: 200px;
     margin: 50px;
+}
+
+.conteudo a {
+    text-decoration: none;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #C2D9A1;
+    padding: 5px 10px;
+    display: inline-block;
+    white-space: nowrap;
+    width: fit-content;
+    margin-left: 90%;
+}
+
+.conteudo a:hover {
+    background-color: #333;
+}
+
+.imagem-flutuante {
+    float: right;
 }
 
 .campo-conteudo {
@@ -489,7 +496,7 @@ h3 {
     .barra-de-navegacao.ativo {
         display: flex;
     }
-    
+
     .grupo-card:hover .card:not(:hover) {
         filter: none;
     }
@@ -539,20 +546,29 @@ h3 {
         transform: none;
     }
 
-    .texto-imagem {
-        flex-direction: column;
-        align-items: center;
+    .conteudo{
+        justify-content: center;
         text-align: center;
     }
 
-    .texto-imagem p {
-        text-align: left; 
+    .conteudo h3{
+        text-align: center;
     }
-
-    .texto-imagem img {
-        max-width: 80%; 
-        margin-top: 20px;
+    .conteudo img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin: 40px auto;
+        display: block;
+        border-radius: 8px;
     }
-
+    
+    .imagem-flutuante {
+        float: none;
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        height: auto;
+    }
 
 }
