@@ -256,7 +256,8 @@ h3 {
 
 .sobre-pag-inicio img {
     height: 200px;
-    margin: 50px;
+    margin: 50px auto; 
+    display: block;
 }
 
 .sobre-pag-inicio a {
@@ -389,7 +390,7 @@ h3 {
 }
 
 /************ Formulario de relato *************/
-    
+
 .formulario {
     max-width: 800px;
     margin: 40px auto;
@@ -445,6 +446,7 @@ h3 {
     font-style: normal;
     color: #E0E0E0;
 }
+
 .formulario .checkbox input {
     margin-right: 10px;
 }
@@ -469,6 +471,7 @@ h3 {
     color: #030303;
     border: #030303;
 }
+
 /************ Perguntas frequentes *************/
 .faq {
     max-width: 800px;
@@ -477,30 +480,30 @@ h3 {
     font-family: "Lora", serif;
     color: #E0E0E0;
     transition: background-color 0.5s ease-in-out;
-  }
-  
-  .faq h2 {
+}
+
+.faq h2 {
     text-align: center;
     margin-bottom: 30px;
-  }
-  
-  .faq-item {
+}
+
+.faq-item {
     margin-bottom: 10px;
     border: 1px solid #C2D9A1;
     border-radius: 5px;
     overflow: hidden;
-  }
+}
 
-  .faq-item button {
+.faq-item button {
     text-align: left;
     font-family: "Lora", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
-  }
-  
-  .faq-pergunta {
+}
+
+.faq-pergunta {
     background-color: #030303;
     color: #C2D9A1;
     padding: 15px;
@@ -511,22 +514,22 @@ h3 {
     font-size: 16px;
     transition: background 0.3s;
     transition: background-color 0.5s ease-in-out;
-  }
-  
-  .faq-pergunta:hover {
+}
+
+.faq-pergunta:hover {
     background-color: #1a1a1a;
-  }
-  
-  .faq-resposta {
+}
+
+.faq-resposta {
     max-height: 0;
     overflow: hidden;
     background-color: #030303;
     transition: max-height 0.4s ease, padding 0.4s ease;
     padding: 0 15px;
     transition: background-color 0.5s ease-in-out;
-  }
+}
 
-  .faq-resposta p {
+.faq-resposta p {
     margin: 0;
     padding: 10px 0;
     font-family: "Lora", serif;
@@ -535,12 +538,38 @@ h3 {
     font-style: normal;
     font-size: 18px;
     color: #E0E0E0;
-  }
-  
-  .faq-item.ativo .faq-resposta {
+}
+
+.faq-item.ativo .faq-resposta {
     max-height: 300px;
     padding: 15px;
+}
+
+/**************** Contato *******************/  
+.contato-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    padding: 40px;
+    color: #C2D9A1;
+    font-family: "Lora", serif;
   }
+  
+  .contato-info {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+  }
+  
+  .contato-box {
+    color: #000;
+    padding: 10px;
+    margin: 20px 0;
+    max-width: 200px;
+  }
+  
+
 /********************** RODAPÉ ***************************************************/
 
 .rodape {
@@ -664,6 +693,7 @@ h3 {
 .modo-claro .formulario {
     color: #030303;
 }
+
 .modo-claro .formulario input[type="text"],
 .modo-claro .formulario input[type="email"],
 .modo-claro .formulario textarea,
@@ -672,11 +702,13 @@ h3 {
     color: #030303;
     border: 1px solid #444;
 }
+
 .modo-claro .formulario button {
     background-color: #FCFCFC;
     color: #030303;
     border: 1px solid #030303;
 }
+
 .modo-claro .formulario button:hover {
     background-color: #030303;
     color: #FCFCFC;
@@ -687,6 +719,7 @@ h3 {
     background-color: #FCFCFC;
     color: #030303;
 }
+
 .modo-claro .faq-pergunta button {
     font-weight: bold;
     color: #030303;
@@ -695,14 +728,18 @@ h3 {
 .modo-claro .faq-pergunta:hover {
     background-color: #CCC;
 }
+
 .modo-claro .faq-resposta {
     background-color: #FCFCFC;
-}   
+}
 
 .modo-claro .faq-resposta p {
     color: #030303;
 }
 
+.modo-claro h3{
+    color: #030303;
+}
 /******* Responsividade ********/
 
 @media (max-width: 1024px) {
@@ -713,11 +750,34 @@ h3 {
     h1 {
         font-size: 52px;
     }
+
 }
 
 @media screen and (max-width: 768px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .conteudo,
+    .campo-conteudo,
+    .faq,
+    .formulario {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
     main {
-        margin: 20px 40px;
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
     h1 {
@@ -852,6 +912,22 @@ h3 {
         max-width: 100%;
         height: auto;
     }
+    .conteudo a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .sobre-pag-inicio a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .sobre-pag-inicio img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 20px auto;
+    }
+
 
 }
 
@@ -881,6 +957,13 @@ h3 {
         margin-top: 10px;
     }
 
+    .sobre-pag-inicio img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 20px auto;
+    }
+
     .card {
         width: 100%;
         height: auto;
@@ -896,7 +979,7 @@ h3 {
         margin: 20px auto;
     }
 
-    .conteudo a{
+    .conteudo a {
         margin-left: 0;
         margin-top: 10px;
     }
